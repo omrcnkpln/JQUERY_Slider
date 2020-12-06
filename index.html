@@ -24,6 +24,9 @@
 </head>
 
 <body>
+    <!-- _____________________________ time-bar _____________________________________________________________ -->
+    <div id="time-bar" class="time-bar"></div>
+
     <!-- _____________________________ header _____________________________________________________________ -->
     <header class="bg-1">
         <div class="center">
@@ -37,7 +40,7 @@
                 <!-- goToTop -->
                 <!-- goToBottom -->
                 <!-- 10 harf den büyük kelime girilmez -->
-                <!-- <ul class="content show">
+                <!-- <ul class="content">
                     <li>@</li>
                     <li>P</li>
                     <li>a</li>
@@ -49,6 +52,7 @@
                     <li>l</li>
                     <li>i</li>
                 </ul> -->
+                <!--  -->
                 <ul class="content show">
                     <li>k</li>
                     <li>e</li>
@@ -78,7 +82,7 @@
                     <li>t</li>
                     <li>a</li>
                 </ul>
-                
+
                 <ul class="content">
                     <li>y</li>
                     <li>a</li>
@@ -99,7 +103,7 @@
                     <li>m</li>
                 </ul>
 
-                <ul class="content">
+                <!-- <ul class="content">
                     <li>ş</li>
                     <li>i</li>
                     <li>m</li>
@@ -114,7 +118,7 @@
                     <li>a</li>
                     <li>d</li>
                     <li>a</li>
-                </ul>
+                </ul> -->
             </div>
 
             <ul class="image-wrapper">
@@ -122,26 +126,46 @@
                     <img src="images/img1.jpg" alt="images">
                 </li>
 
-                <!-- img2 -->
                 <li class="img1 previous">
                     <img src="images/img2.jpg" alt="images">
                 </li>
 
-                <!-- img3 -->
                 <li class="img2 present">
                     <img src="images/img3.jpg" alt="images">
                 </li>
 
-                <!-- img4 -->
                 <li class="img3 next">
                     <img src="images/img4.jpg" alt="images">
                 </li>
 
-                <!-- img5 -->
                 <li class="img4 image-to-bottom">
                     <img src="images/img5.jpg" alt="images">
                 </li>
             </ul>
+
+            <div class="h-bottom">
+                <ul class="play-stop">
+                    <li id="stop" class="btn stop show">
+                        <img src="images/pause-white.svg" alt="pause-white">
+                    </li>
+    
+                    <li id="play" class="btn play">
+                        <img src="images/play-arrow-white.svg" alt="play-arrow-white">
+                    </li>
+                </ul>
+
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar animate__animated progress-1"></div>
+                </div>
+    
+                <div id="count" class="count animate__animated">
+                    01
+                </div>
+
+                <div class="count d-sm-none">
+                    /06
+                </div>
+            </div>
 
             <div id="btnDown" class="btn btn-down">
                 <img src="images/arrow-down-white.svg" alt="btn">
