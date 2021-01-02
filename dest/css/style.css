@@ -44,7 +44,7 @@ header {
 @-webkit-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  90% {
+  80% {
     left: 0;
     width: 100%; }
   to {
@@ -53,7 +53,7 @@ header {
 @-moz-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  90% {
+  80% {
     left: 0;
     width: 100%; }
   to {
@@ -62,7 +62,7 @@ header {
 @-o-keyframes time-bar-ani {
   0% {
     width: 0%; }
-  90% {
+  80% {
     left: 0;
     width: 100%; }
   to {
@@ -71,7 +71,7 @@ header {
 @keyframes time-bar-ani {
   0% {
     width: 0%; }
-  90% {
+  80% {
     left: 0;
     width: 100%; }
   to {
@@ -93,16 +93,14 @@ header.bg-5 {
   background-color: rebeccapurple; }
 
 header {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  background-color: red;
+  height: 100vh;
   overflow: hidden;
-  -webkit-transition: 2s all ease-in-out;
-     -moz-transition: 2s all ease-in-out;
-       -o-transition: 2s all ease-in-out;
-          transition: 2s all ease-in-out;
+  -webkit-transition: 666ms all ease-in-out;
+     -moz-transition: 666ms all ease-in-out;
+       -o-transition: 666ms all ease-in-out;
+          transition: 666ms all ease-in-out;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
@@ -110,45 +108,32 @@ header {
      -moz-box-align: center;
           align-items: center; }
   header .center {
-    width: 90vw;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2vw;
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
     -webkit-justify-content: space-between;
        -moz-box-pack: justify;
-            justify-content: space-between; }
-    header .center .btn-up {
-      top: 2vw;
-      -webkit-transform: rotate(180deg);
-         -moz-transform: rotate(180deg);
-           -o-transform: rotate(180deg);
-              transform: rotate(180deg);
-      z-index: 4; }
-    header .center .btn-down {
-      bottom: 2vw;
-      z-index: 4; }
-    header .center .btn {
-      width: 4vw;
-      height: 4vw;
-      position: absolute;
+            justify-content: space-between;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+            align-items: center;
+    position: relative; }
+    header .center .header-top {
       display: -webkit-flex;
       display: -moz-box;
       display: flex;
-      -webkit-align-self: center;
-              align-self: center;
-      -webkit-justify-content: center;
-         -moz-box-pack: center;
-              justify-content: center;
-      border: 1px solid #BCB5A8;
-      border-radius: 4vw; }
-      header .center .btn img {
-        width: 3vw; }
-      header .center .btn:hover {
-        background-color: rgba(0, 0, 0, 0.1); }
-      header .center .btn:active {
-        background-color: rgba(0, 0, 0, 0.3); }
+      -webkit-flex-direction: row;
+         -moz-box-orient: horizontal;
+         -moz-box-direction: normal;
+              flex-direction: row;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+              justify-content: space-between;
+      width: 100%; }
     header .center .content-wrapper {
       position: relative;
       display: -webkit-flex;
@@ -166,7 +151,7 @@ header {
         position: absolute;
         text-transform: uppercase; }
         header .center .content-wrapper .content li {
-          font-size: 9vw;
+          font-size: 7vw;
           -webkit-animation-fill-mode: forwards;
              -moz-animation-fill-mode: forwards;
                -o-animation-fill-mode: forwards;
@@ -301,7 +286,7 @@ header {
                 transform: translateY(20vw); }
     header .center .image-wrapper {
       position: relative;
-      width: 30vw;
+      width: 35vw;
       height: 20vw; }
       header .center .image-wrapper li {
         position: absolute;
@@ -380,7 +365,7 @@ header {
              animation-name: item-4-3; }
     header .center .h-bottom {
       position: absolute;
-      bottom: 2vw;
+      bottom: 1vw;
       right: 2vw;
       display: -webkit-flex;
       display: -moz-box;
@@ -391,10 +376,43 @@ header {
       -webkit-align-items: center;
          -moz-box-align: center;
               align-items: center;
-      width: 33vw; }
-      header .center .h-bottom .play-stop {
+      width: 35vw; }
+      header .center .h-bottom .btn-up {
+        top: 2vw;
+        -webkit-transform: rotate(90deg);
+           -moz-transform: rotate(90deg);
+             -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+        z-index: 4; }
+      header .center .h-bottom .btn-down {
+        bottom: 2vw;
+        z-index: 4;
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+                transform: rotate(-90deg); }
+      header .center .h-bottom .btn {
         width: 4vw;
         height: 4vw;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+                justify-content: center;
+        border: 0.1vw solid #BCB5A8;
+        border-radius: 4vw;
+        padding: 0; }
+        header .center .h-bottom .btn img {
+          width: 2.5vw; }
+        header .center .h-bottom .btn:hover {
+          background-color: rgba(0, 0, 0, 0.1); }
+        header .center .h-bottom .btn:active {
+          background-color: rgba(0, 0, 0, 0.3); }
+      header .center .h-bottom .play-stop {
         display: -webkit-flex;
         display: -moz-box;
         display: flex;
@@ -408,28 +426,23 @@ header {
           display: -webkit-flex;
           display: -moz-box;
           display: flex; }
-        header .center .h-bottom .play-stop li {
-          position: absolute;
-          -webkit-align-items: center;
-             -moz-box-align: center;
-                  align-items: center;
-          -webkit-justify-content: center;
-             -moz-box-pack: center;
-                  justify-content: center;
+        header .center .h-bottom .play-stop .btn {
+          width: 3vw;
+          height: 3vw;
           display: none;
-          margin: 0; }
+          margin: 0;
+          padding: 0;
+          border-radius: 3vw; }
+          header .center .h-bottom .play-stop .btn img {
+            width: 1.5vw; }
       header .center .h-bottom .progress {
-        height: 2px;
-        width: 70%; }
+        height: 0.1vw;
+        width: 18vw; }
         header .center .h-bottom .progress .progress-bar {
           background-color: #dead5a; }
       header .center .h-bottom .count {
         color: white;
         font-size: 2vw; }
-
-footer {
-  height: 200px;
-  margin-top: 100%; }
 
 @-webkit-keyframes lettersGoToBottom {
   0% {
